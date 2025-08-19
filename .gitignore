@@ -1,0 +1,22 @@
+﻿# Node
+node_modules/
+npm-debug.log*
+
+# Build outputs
+**/dist/
+.next/
+.cache/
+
+# Env files
+.env
+.env.*
+**/.env
+**/.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

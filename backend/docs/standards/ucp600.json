@@ -1,0 +1,102 @@
+[
+  {
+    "id": "ucp600-article14",
+    "keyword": "presentation period",
+    "description": "Presentation period must not exceed 21 days from shipment date.",
+    "severity": "high",
+    "suggestion": "Add: 'Documents must be presented within 21 days from shipment date.'"
+  },
+  {
+    "id": "ucp600-article6-expiry",
+    "keyword": "expiry",
+    "description": "LC should state an expiry date and place.",
+    "severity": "high",
+    "suggestion": "Add explicit expiry date and place of expiry for the credit."
+  },
+  {
+    "id": "ucp600-article6-place-of-expiry",
+    "keyword": "place of expiry",
+    "description": "LC should state the place of expiry.",
+    "severity": "high",
+    "suggestion": "State the place of expiry where presentation must occur."
+  },
+  {
+    "id": "ucp600-article14-21days-shipment-phrase",
+    "pattern": "(within|no\\s+later\\s+than)\\s*21\\s*days.*(from|after)\\s*(shipment|on\\s*board)",
+    "description": "Presentation period phrased as 21 days from shipment/on board.",
+    "severity": "high",
+    "suggestion": "Add wording: 'Documents must be presented within 21 days after shipment/on board date.'"
+  },
+  {
+    "id": "ucp600-latest-shipment-date-present",
+    "keyword": "latest shipment date",
+    "description": "Latest shipment date should be stated (and be logically before expiry).",
+    "severity": "medium",
+    "suggestion": "State a 'Latest shipment date' that precedes the expiry date by at least 21 days."
+  },
+  {
+    "id": "ucp600-amount-currency-format",
+    "pattern": "((usd|eur|gbp|aud|cad|cny|inr|jpy|chf|sgd|hkd|aed)\\s*\\d{1,3}(,\\d{3})*(\\.\\d{2})?)|(\\d{1,3}(,\\d{3})*(\\.\\d{2})?\\s*(usd|eur|gbp|aud|cad|cny|inr|jpy|chf|sgd|hkd|aed))",
+    "description": "Amount and currency should be clearly stated in a consistent numeric format.",
+    "severity": "medium",
+    "suggestion": "State the credit amount with currency code and consistent separators (e.g., USD 100,000.00)."
+  },
+  {
+    "id": "ucp600-transport-doc-required",
+    "pattern": "(bill\\s+of\\s+lading|air\\s+waybill|\\bawb\\b|cmr|multimodal\\s+transport\\s+document)",
+    "description": "Required transport document should match the shipment mode (e.g., B/L for sea, AWB for air).",
+    "severity": "medium",
+    "suggestion": "Specify the correct transport document (e.g., 'Full set of original Bills of Lading' or 'Air Waybill')."
+  },
+  {
+    "id": "ucp600-named-ports-present",
+    "pattern": "(port\\s+of\\s+loading|place\\s+of\\s+receipt).*(port\\s+of\\s+discharge|place\\s+of\\s+delivery)",
+    "description": "Named ports/places should be consistent with document requirements.",
+    "severity": "medium",
+    "suggestion": "State both Port of Loading/Place of Receipt and Port of Discharge/Place of Delivery."
+  },
+  {
+    "id": "ucp600-named-airports-present",
+    "pattern": "(airport\\s+of\\s+(departure|loading)).*(airport\\s+of\\s+(destination|discharge|arrival))",
+    "description": "Named airports should be consistent with document requirements for air shipments.",
+    "severity": "medium",
+    "suggestion": "State both Airport of Departure/Loading and Airport of Destination/Discharge."
+  },
+  {
+    "id": "ucp600-partial-shipments-explicit",
+    "pattern": "partial\\s+shipments\\s+(allowed|not\\s+allowed)",
+    "description": "Terms on partial shipments should be explicit and unambiguous.",
+    "severity": "medium",
+    "suggestion": "State clearly: 'Partial shipments allowed' or 'Partial shipments not allowed'."
+  },
+  {
+    "id": "ucp600-transshipment-explicit",
+    "pattern": "transshipment\\s+(allowed|not\\s+allowed)",
+    "description": "Terms on transshipment should be explicit and unambiguous.",
+    "severity": "medium",
+    "suggestion": "State clearly: 'Transshipment allowed' or 'Transshipment not allowed'."
+  },
+  {
+    "id": "ucp600-insurance-coverage-110",
+    "pattern": "((cif|cip).*(insurance|cover).*(110%))|(110%.*(insurance|cover))",
+    "description": "For CIF/CIP, insurance coverage should be at least 110% unless otherwise stated.",
+    "severity": "high",
+    "suggestion": "Require insurance cover for CIF/CIP shipments for at least 110% of the invoice value."
+  },
+  {
+    "id": "ucp600-on-board-notation-date",
+    "pattern": "on[- ]board.*date",
+    "description": "On-board notation and date should be present when required (e.g., B/L).",
+    "severity": "medium",
+    "suggestion": "Require on-board notation with on board date on the transport document."
+  },
+  {
+    "id": "ucp600-presentation-place-stated",
+    "pattern": "(place\\s+of\\s+presentation|presentation\\s+at|presented\\s+at)",
+    "description": "Place of presentation should be stated if not standard.",
+    "severity": "low",
+    "suggestion": "State the place where documents must be presented (e.g., bank branch and city)."
+  }
+]
+
+

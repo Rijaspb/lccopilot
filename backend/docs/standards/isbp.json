@@ -1,0 +1,53 @@
+[
+  {
+    "id": "isbp-data-consistency",
+    "keyword": "beneficiary",
+    "description": "Beneficiary, applicant, and amounts should be consistent across documents.",
+    "severity": "medium",
+    "suggestion": "Ensure beneficiary, applicant, and amounts are consistently stated across documents."
+  },
+  {
+    "id": "isbp-shipment-details",
+    "keyword": "incoterms",
+    "description": "Shipment terms like Incoterms, port of loading/discharge should be clear.",
+    "severity": "medium",
+    "suggestion": "Include Incoterms (e.g., FOB/CIF), port of loading and port of discharge."
+  },
+  {
+    "id": "isbp-goods-description-similarity",
+    "pattern": "(description\\s+of\\s+goods|goods\\s+description)",
+    "description": "Goods description should not be materially different across documents; minor abbreviations acceptable.",
+    "severity": "medium",
+    "suggestion": "Align goods description across LC and documents; avoid material discrepancies."
+  },
+  {
+    "id": "isbp-incoterms-structure",
+    "pattern": "incoterms\\s*(20(10|20|30)|2000|2010|2020)\\s*[a-z]{3}.*(named\\s*place|at\\s+\\w+)",
+    "description": "Incoterms should include term, version (year), and a named place.",
+    "severity": "medium",
+    "suggestion": "Specify Incoterms term (e.g., CIF), version (e.g., Incoterms 2020), and named place (e.g., CIF Shanghai)."
+  },
+  {
+    "id": "isbp-beneficiary-applicant-consistency",
+    "pattern": "(beneficiary|applicant).*(address|name)",
+    "description": "Beneficiary/applicant names and addresses should be consistent, ignoring trivial punctuation/case.",
+    "severity": "low",
+    "suggestion": "Ensure consistent spelling and addresses for beneficiary and applicant."
+  },
+  {
+    "id": "isbp-invoice-beneficiary-issuer",
+    "pattern": "invoice.*(issued\\s+by|from)\\s+beneficiary",
+    "description": "Invoice issuer should be the beneficiary; handle currency/amount tolerances as per LC.",
+    "severity": "medium",
+    "suggestion": "State that the commercial invoice is issued by the beneficiary and respects any tolerances."
+  },
+  {
+    "id": "isbp-originals-copies-counts",
+    "pattern": "(originals?\\s+and\\s+copies|\\boriginals?\\b|\\bcopies\\b).*\\b(count|number)\\b",
+    "description": "Counts of originals and copies for each document should align with LC requirements.",
+    "severity": "low",
+    "suggestion": "Specify the number of originals and copies required for transport and other documents."
+  }
+]
+
+

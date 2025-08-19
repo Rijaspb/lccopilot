@@ -1,0 +1,18 @@
+[
+  {
+    "id": "eucp-format",
+    "keyword": "electronic presentation",
+    "description": "If electronic presentation is allowed, specify format and platform.",
+    "severity": "low",
+    "suggestion": "State acceptable electronic document formats and the platform or method for presentation."
+  },
+  {
+    "id": "eucp-platform-details",
+    "pattern": "(platform|portal|system)\\s+(name|details|url)",
+    "description": "If eUCP applies, specify the platform/portal/system details for presentation.",
+    "severity": "low",
+    "suggestion": "Name the platform (e.g., bank portal) and any access details for e-presentation."
+  }
+]
+
+
