@@ -15,8 +15,10 @@ export async function validateLc({ text, file, accessToken }: { text?: string; f
   if (file) formData.append('file', file);
   if (text) formData.append('text', text);
 
-  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || '';
-  const res = await fetch(`${apiBaseUrl}/api/validate-lc`, {
+  const rawBase = import.meta.env.VITE_API_BASE_URL || '';
+  const apiBaseUrl = rawBase.replace(/\/+$/, '');
+  const url = apiBaseUrl ? `${apiBaseUrl}/api/validate-lc` : '/api/validate-lc';
+  const res = await fetch(url, {
     method: 'POST',
     body: formData,
     headers: accessToken ? { Authorization: `Bearer ${accessToken}` } : undefined,
