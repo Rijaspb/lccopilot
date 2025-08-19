@@ -10,8 +10,7 @@ export default function AuthPanel() {
     e.preventDefault();
     setError(null);
     setStatus('Sending magic link…');
-    const siteUrl = import.meta.env.VITE_SITE_URL || window.location.origin;
-    const { error } = await supabase.auth.signInWithOtp({ email, options: { emailRedirectTo: siteUrl } });
+    const { error } = await supabase.auth.signInWithOtp({ email, options: { emailRedirectTo: window.location.origin } });
     if (error) {
       setError(error.message);
       setStatus(null);
